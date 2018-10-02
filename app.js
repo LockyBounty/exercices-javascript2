@@ -54,7 +54,7 @@ for (i = 0; i < a.length; i++){ //On fait une boucle pour parcourir toutes les o
 //modifier tout ces éléments en leurs ajoutant la classe 'shadow' //
 /*
 
-let varLocky = document.querySelectorAll(".container p"); //sélectioner tous les paragraphes dans 'container'//
+let varLocky = document.querySelectorAll(".container p"); //sélectioner tous les paragraphes "p" dans 'container'//
 for (i = 0; i < varLocky.length; i++){
     varLocky[i].classList.add("shadow");
 };
@@ -63,5 +63,16 @@ for (i = 0; i < varLocky.length; i++){
 
 // Exercice 3 //
 
+//-->Element.setAttribute(name, value);//
+
 //1.a: sélectionne tous les éléments de type 'pre' / avec la propriété style change la couleur de texte // 
+
+let a = document.querySelectorAll("pre");
+for (i = 0; i < a.length; i++) { //On fait une boucle pour parcourir toutes les occurences // 
+    a[i].style.color = "white"; //On ajoute style="color:white" au "pre"//
+    a[i].style.backgroundColor = "blue";//On ajoute style="backgroundColor:"blue" au "pre"//
+    a[i].style.borderTop = "3px solid red";//On ajoute border-top="3px solid red" au "pre"//
+    a[i].style.borderBottom = "3px solid red";//On ajoute border-bottom="3px solid red" au "pre"//
+}
+
 
