@@ -1,8 +1,11 @@
-//Exercice 1//
+
+
+//Exercice 1: Manipulation de classes//
 
 //Bon à savoir //
 
-/* ́equivalences des s ́electeurs*/
+/* Aide : https://www.w3schools.com/jsref */
+/* ́equivalences des śelecteurs*/
 /*
 document.getElementById("unId")
 ≡ équivaut à :
@@ -63,10 +66,9 @@ for (i = 0; i < varLocky.length; i++){
 
 // Exercice 3 //
 
-//-->Element.setAttribute(name, value);//
+//3.a: sélectionne tous les éléments de type 'pre' / avec la propriété style change la couleur de texte // 
 
-//1.a: sélectionne tous les éléments de type 'pre' / avec la propriété style change la couleur de texte // 
-
+/*
 let a = document.querySelectorAll("pre");
 for (i = 0; i < a.length; i++) { //On fait une boucle pour parcourir toutes les occurences // 
     a[i].style.color = "white"; //On ajoute style="color:white" au "pre"//
@@ -74,5 +76,41 @@ for (i = 0; i < a.length; i++) { //On fait une boucle pour parcourir toutes les 
     a[i].style.borderTop = "3px solid red";//On ajoute border-top="3px solid red" au "pre"//
     a[i].style.borderBottom = "3px solid red";//On ajoute border-bottom="3px solid red" au "pre"//
 }
+*/
+
+
+//3.b: sélectionne le premier élément de type 'h3'/ remplacer son contenu HTML en <em>Italic title ! yeah !</em> // 
+
+/*
+document.querySelectorAll('h3')[0].innerHTML='<em>Italic title ! yeah !</em>';
+*/
+
+//3.c: sélectionne le premier élément de type 'h2'/ remplacer son contenu texte en <strong>HTML doens't work !</strong> // 
+
+/*
+document.querySelectorAll('h2')[0].innerText=`<strong>HTML doens't work !</strong>`;
+
+//marche aussi avec textContent a la place de innerText //
+*/
+
+// Exercice 4: Création d'éléments //
+
+//4.a: sélectioner le premier 'ul' / créer un élément de type 'li' /
+//ajouter ce texte Mon meilleur ami est <a href='http://www.google.com'>Google</a> dans le 'li' / 
+//et l'ajouter dans le ul //
+
+let lockyTroller = document.querySelectorAll("ul")[0];
+lockyTroller.innerHTML=`<li>Mon meilleur ami est <a href='http://www.google.com'>Google</a></li>`;
+
+//4.b: sélectionner le premier lien dans le 'li' précedement créé/
+//avec la propriété style changer la couleur de texte du lien //
+
+document.querySelectorAll("ul a[href]")[0].style.border = "10px solid red"; // ligne d'exercice pour le fun//
+document.querySelectorAll("ul a[href]")[0].style.textDecoration = "none"; // ligne d'exercice pour le fun//
+document.querySelectorAll("ul a[href]")[0].style.color = "green"; 
+
+// Exercice 5: Création et suppression de plusieurs éléments //
+
+
 
 
