@@ -99,6 +99,7 @@ document.querySelectorAll('h2')[0].innerText=`<strong>HTML doens't work !</stron
 //ajouter ce texte Mon meilleur ami est <a href='http://www.google.com'>Google</a> dans le 'li' / 
 //et l'ajouter dans le ul //
 
+/*
 let lockyTroller = document.querySelectorAll("ul")[0];
 lockyTroller.innerHTML=`<li>Mon meilleur ami est <a href='http://www.google.com'>Google</a></li>`;
 
@@ -108,9 +109,37 @@ lockyTroller.innerHTML=`<li>Mon meilleur ami est <a href='http://www.google.com'
 document.querySelectorAll("ul a[href]")[0].style.border = "10px solid red"; // ligne d'exercice pour le fun//
 document.querySelectorAll("ul a[href]")[0].style.textDecoration = "none"; // ligne d'exercice pour le fun//
 document.querySelectorAll("ul a[href]")[0].style.color = "green"; 
+*/
+
 
 // Exercice 5: Création et suppression de plusieurs éléments //
 
+//5.a: sélectionner le premier élément 'ol' / 
+//faire une boucle sur tous les enfants de ce dernier grâce à sa propriété children /
+//supprimer chaque enfant de 'ol' grâce à removeChild() /
 
 
+let luckyList = document.querySelectorAll("ol")[0];
+
+while (luckyList.hasChildNodes()) {  
+    luckyList.removeChild(luckyList.firstChild); 
+};
+
+
+
+//5.b: déclarer dans un tableau les valeurs suivantes : ["Silent Teacher","Code Monkey", "CodeCombat"]
+//faire une boucle sur tous les enfants du tableau précédement créé
+//pour chaque valeur du tableau créer un élément 'li' grâce à document.createElement()
+//ajouter à chaque 'li' la valeur courante tableau
+//ensuite ajouter chaque 'li' à l'élément 'ol' précédement sélectionné
+
+let arrayLocky = ["Silent Teacher","Code Monkey", "CodeCombat"];
+for (i=0; i < arrayLocky.length ; i++){
+
+    let ligne = document.createElement("LI"); //Attention a bien mettre en maj. ! / crée le li //
+    luckyList.appendChild(ligne).innerHTML = arrayLocky[i]; 
+    //Va foutre chaque élément du tableau dans un "li" et ensuite dans le "ol" qui est luckyList ici//
+};
+
+/**/
 
