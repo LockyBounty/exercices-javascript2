@@ -47,6 +47,10 @@ function showPosition(event) {
     let coor = "X coords: " + x + ", Y coords: " + y;
     document.getElementById("defile").innerHTML = coor;
 }
+document.querySelector("#axe-x").click(function(){
+    var x = this.position();
+    alert("Top: " + x.top + " Left: " + x.left);
+});
 
 </script>
 
