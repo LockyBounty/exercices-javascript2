@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="mouse.js" ></script>
+</head>
+
+<body>
+
+<div class="hoverMe">Nudes</div>
+<div class="hoverMe">Nudes</div>
+<div class="hoverMe">Nudes</div>
+
+<div id="reset">Reset</div>
+
+<div id="axe-x">axe-x</div>
+<div id="axe-y">axe-y</div>
+
+
+<script>
+let mouseLocky = document.querySelectorAll(".hoverMe");
+
+function mouseOver() {
+    this.style.opacity = "0.1"; //le "this" ici va chercher la valeur courante (ici, mouseLocky) lors son appel et l'utiliser//
+};
+for (i=0; i < mouseLocky.length ; i++){
+    mouseLocky[i].addEventListener("mouseover", mouseOver);
+};
+
+//
+let mouseLockyAppear = document.querySelector("#reset");
+
+function mouseAppear() {
+    
+    for(i=0;i<mouseLocky.length;i++){
+        mouseLocky[i].style.opacity = "0.9";
+    }
+};
+mouseLockyAppear.addEventListener("click", mouseAppear);
+
+//
+
+let defile = "";
+
+function showPosition(event) {
+    let x = event.clientX;
+    let y = event.clientY;
+    let coor = "X coords: " + x + ", Y coords: " + y;
+    document.getElementById("defile").innerHTML = coor;
+}
+
+</script>
+
+</body>
+</html>
