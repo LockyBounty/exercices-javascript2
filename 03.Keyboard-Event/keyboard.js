@@ -41,7 +41,6 @@
             default:
                 document.querySelector("#character").style.backgroundColor="darkgray";
                 alert('Appuyez sur un chiffre de 0 to 9 : (maj+num)');
-         
         };
     };
 
@@ -57,7 +56,7 @@
 
     Tip : Faire la structure HTML sans JavaScript*/
 
-    
+
  
     
  
