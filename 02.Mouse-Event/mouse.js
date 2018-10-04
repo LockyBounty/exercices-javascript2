@@ -24,6 +24,7 @@
 
 /*
 let mouseLockyAppear = document.querySelector("#reset");
+    //querySelector va chercher directement la premiere occurence tandis qu'avec querySelectorAll il faut préciser avec [0]//
 
 function mouseAppear() {
     
@@ -40,7 +41,24 @@ mouseLockyAppear.addEventListener("click", mouseAppear);
     //Créer (en HTML) 2 DIV avec une id chacune 'axe-x' et 'axe-y'
     //Faire de sorte que lorsque l'on bouge la souris dans la fenêtre, la position soit affichée dans les divs associées
     //Tip : Utiliser l'évènement reçu en argument Tip : Utiliser innerHTML ou innerText
+    //Tip Locky : Bien comprendre l'utilisation de "element.addEventListener("click", function(){ myFunction(p1, p2); });"
+        //car c'est cela qui permet lancer automatiquement la fonction dans les div ou autres d'HTML
 
-/*
 
-*/
+//ATTENTION ! inclure en début "window.onload = function () {...}, car on a besoin de laisser le temps à la page HTML de charger
+// sinon ça va retourner une erreur ! car le script js externe veut se lancer d'abord et retourne une valeur null pour un
+// addEventListener //
+
+window.onload = function () {
+    document.querySelector("body").addEventListener("mousemove",
+        //ici on crée un event "mousemove" pour body, puis ajoute la fonction// alt: document.body.addEventListener(...)//
+
+    function souris(event) {
+        let x = event.clientX;
+        let y = event.clientY;
+        document.getElementById('axe-x').innerHTML = `Position de x : ${x}px`;
+        document.getElementById('axe-y').innerHTML = `Position de y : ${y}px`;
+
+    });
+};
+

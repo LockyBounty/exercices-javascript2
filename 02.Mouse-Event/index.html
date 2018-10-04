@@ -10,17 +10,19 @@
 <div class="hoverMe">Nudes</div>
 <div class="hoverMe">Nudes</div>
 
-<div id="reset">Reset</div>
+<div id="reset">Click to reset the opacity</div>
 
 <div id="axe-x">axe-x</div>
 <div id="axe-y">axe-y</div>
 
 
 <script>
+/*
 let mouseLocky = document.querySelectorAll(".hoverMe");
 
 function mouseOver() {
-    this.style.opacity = "0.1"; //le "this" ici va chercher la valeur courante (ici, mouseLocky) lors son appel et l'utiliser//
+    this.style.opacity = "0.1";
+        //le "this" ici va chercher la valeur courante (ici, mouseLocky) lors de son appel et l'utiliser//
 };
 for (i=0; i < mouseLocky.length ; i++){
     mouseLocky[i].addEventListener("mouseover", mouseOver);
@@ -37,21 +39,20 @@ function mouseAppear() {
 };
 mouseLockyAppear.addEventListener("click", mouseAppear);
 
-//
+*/
 
-let defile = "";
+    //////////////////////////////////
+    /*
+    
+    document.querySelector("body").addEventListener("mousemove",
+        function(event) {
+            let x = event.clientX;
+            let y = event.clientY;
+            document.getElementById('axe-x').innerHTML = `position de x : ${x}px`;
+            document.getElementById('axe-y').innerHTML = `position de y : ${y}px`;
 
-function showPosition(event) {
-    let x = event.clientX;
-    let y = event.clientY;
-    let coor = "X coords: " + x + ", Y coords: " + y;
-    document.getElementById("defile").innerHTML = coor;
-}
-document.querySelector("#axe-x").click(function(){
-    var x = this.position();
-    alert("Top: " + x.top + " Left: " + x.left);
-});
 
+        });*/
 </script>
 
 </body>
