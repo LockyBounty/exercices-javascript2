@@ -5,7 +5,7 @@
     //   Faire changer de couleur de fond a cette DIV à chaque fois qu'on appuie 
     //   sur une touche numérique de 0 à 9 sur le clavier
 //   Tip: utiliser le switch / et event.charCode //
-        
+/*        
     function changerfond(event) {    
         switch (event.charCode) {
             case 48:
@@ -46,6 +46,18 @@
     };
 
     document.querySelector("body").addEventListener("keypress", changerfond);
+*/
+
+// Exercice 3.2 : 
+    /*
+    Créer (en HTML) 4 div avec les id suivantes : "up, down, left, right"
+    Créer une class 'highlight' dans le CSS qui réduit l'opacité de l'élément
+    Pour chaque div ajouter la classe 'highlight' quand une des touches directionnelles est enfoncée
+    Pour chaque div retirer la classe 'highlight' quand on relâche la touche
+
+    Tip : Faire la structure HTML sans JavaScript*/
+
     
+ 
     
  
