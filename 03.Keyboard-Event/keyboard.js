@@ -56,7 +56,51 @@
 
     Tip : Faire la structure HTML sans JavaScript*/
 
+let up = document.querySelector("#up");
+let down = document.querySelector("#down");
+let left = document.querySelector("#left");
+let right = document.querySelector("#right");
 
+function presse(event) {
+    switch (event.keyCode) {/*preferez event.keyCode à event.charCode ici, sinon ça fout la merde*/
+        case 38:
+            up.classList.add("highlight");
+            break;
+        case 40:
+            down.classList.add("highlight");
+            break;
+        case 37:
+            left.classList.add("highlight");
+            break;
+        case 39:
+            right.classList.add("highlight");
+            break;
+        default:
+            window.confirm("Veuillez n'utiliser que les flèches directionnelles !");
+            
+    };
+};
+
+function relacheBouton(event) {
+    switch (event.keyCode) {
+        case 38:
+            up.classList.remove("highlight");
+            break;
+        case 40:
+            down.classList.remove("highlight");
+            break;
+        case 37:
+            left.classList.remove("highlight");
+            break;
+        case 39:
+            right.classList.remove("highlight");
+            break;
+     
+    };
+};
+
+document.body.addEventListener("keydown", presse);
+document.body.addEventListener("keyup", relacheBouton);
  
     
  

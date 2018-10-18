@@ -5,7 +5,7 @@ html {
 }
 
 body {
-    display: flex;
+    display: block;
     max-width: 100%;
     max-height: 100%;
     background-color: blueviolet;
@@ -19,6 +19,7 @@ body {
     text-align: center;
     align-content: center;
     align-items: center;
+    flex:1;
     display: grid;
     position: absolute;
     top: 20%;
@@ -67,4 +68,9 @@ body {
     position: absolute;
     top: 50%;
     left: 80%;
+}
+
+.highlight {
+    
+    opacity: 0.3;
 }
